@@ -21,7 +21,7 @@
         <td>{{ bookdata['publisher'] }}</td>
         <td>{{ bookdata['key'] }}</td>
         <td> 
-          <form action="{{ url_for('main.database_delete', bookdata['key']) }}" method="POST">
+          <form action="{{ url_for('main.database_delete', key=bookdata['key']) }}" method="POST">
             <input type="submit" value="Delete">
           </form>
         </td>
