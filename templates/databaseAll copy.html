@@ -1,0 +1,16 @@
+<!doctype html>
+<head>
+  <title>Datastore All Display</title>
+</head>
+<body>
+    <form action="{{ url_for('toppage') }}">
+       <input type="submit" value="Back to TopPage">
+    </form>
+
+  
+  <ul>
+    {% for bookdata in booksData %}
+    <li>{{ bookdata['bookname'] }} / {{ bookdata['author'] }} / {{ bookdata['publisher'] }}</li>
+    {% endfor %}
+  </ul>
+</body>
